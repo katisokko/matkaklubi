@@ -6,10 +6,10 @@
     "dev": "next dev",
     "build": "yarn migrate:deploy && next build",
     "start": "next start --port ${PORT-3000}",
-    "migrate:dev": "npx prisma migrate dev",
-    "migrate:deploy": "npx prisma migrate deploy",
-    "migrate:status": "npx prisma migrate status",
-    "generate": "npx prisma generate"
+    "migrate:dev": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "migrate:status": "prisma migrate status",
+    "generate": "prisma generate"
   },
   "dependencies": {
     "@next/font": "^13.0.2",

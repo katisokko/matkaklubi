@@ -3,7 +3,7 @@
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://postgres:CbmltLkYk2g6ODzVHVio@containers-us-west-40.railway.app:7469/railway"
 }
 
 generator client {
@@ -18,8 +18,15 @@ model Todo {
 }
 
 model Trek {
-  id          String   @id @default(uuid())
-  createdAt   DateTime @default(now())
-  title       String
-  description String
+  id                  String   @id @default(uuid())
+  createdAt           DateTime @default(now())
+  title               String
+  description         String
+  startsAt            String
+  endsAt              String
+  locationDescription String
+  locationLongitude   String
+  locationLatitude    String
+  price               String
+  imageUrl            String
 }

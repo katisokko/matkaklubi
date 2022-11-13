@@ -1,11 +1,13 @@
 import useSWR, { mutate } from "swr";
-import { Todo } from "./types";
 
+const trekPath = "/api/treks";
+
+export const useTreks = () => useSWR(trekPath);
+
+/*
 const todoPath = "/api/todos";
-
-export const useTodos = () => useSWR<Todo[]>(todoPath);
-
-export const createTodo = async (text: string) => {
+export const useTodos = () => useSWR(todoPath);
+export const createTodo = async (text) => {
   mutate(
     todoPath,
     todos => [{ text, completed: false, id: "new-todo" }, ...todos],
@@ -15,11 +17,9 @@ export const createTodo = async (text: string) => {
     method: "POST",
     body: JSON.stringify({ text }),
   });
-
   mutate(todoPath);
 };
-
-export const toggleTodo = async (todo: Todo) => {
+export const toggleTodo = async (todo) => {
   mutate(
     todoPath,
     todos =>
@@ -34,9 +34,9 @@ export const toggleTodo = async (todo: Todo) => {
   });
   mutate(todoPath);
 };
-
-export const deleteTodo = async (id: string) => {
+export const deleteTodo = async (id) => {
   mutate(todoPath, todos => todos.filter(t => t.id !== id), false);
   await fetch(`${todoPath}?todoId=${id}`, { method: "DELETE" });
   mutate(todoPath);
 };
+*/
