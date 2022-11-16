@@ -9,7 +9,7 @@ const Matk = ({ matk }) => {
             <div className={styles.pildiKonteiner}>
                 <Image
                     alt={`${matk.title} pilt`}
-                    src={`https://www.tyrol.com/images/nbtrisosnlo-/walking-hiking-in-tirol.jpg`}
+                    src={`https://res.cloudinary.com/demo/image/fetch/${matk.imageUrl}`}
                     quality={100}
                     layout='fill'
                     objectFit='contain'
@@ -21,7 +21,11 @@ const Matk = ({ matk }) => {
                 target="_blank"
             >
                 {matk.locationDescription}
-            </a>
+            </a><br />
+            <span>{matk.description}</span><br />
+            <span>Matk algab {matk.startsAt}</span><br />
+            <span>Matk lõppeb {matk.endsAt}</span><br />
+            <span>Hind: {matk.price}</span><br />
         </div>
     )
 }

@@ -1,0 +1,46 @@
+.pais {
+    background-image: url("../../public/Hills@2x.png");
+    height: 778px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 32px;
+    padding-left: 72px;
+    padding-right: 80px;
+}
+
+.konteiner {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 120px;
+}
+
+.vorm {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    font-size: 16px;
+    margin-top: 45px;
+}
+
+.vormInput {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    height: 35px;
+}
+
+.vormNupp {
+    font-size: 16px;
+    margin-top: 25px;
+    border: 0;
+    background-color: #2f4f4f;
+    color: aliceblue;
+    height: 35px;
+}
